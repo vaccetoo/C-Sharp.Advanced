@@ -1,4 +1,5 @@
 ﻿
+
 int[] valueNumbers = Console.ReadLine()
     .Split()
     .Select(int.Parse)
@@ -13,23 +14,23 @@ int elementsToPush = valueNumbers[0];
 int elementsToPop = valueNumbers[1];
 int checkForElement = valueNumbers[2];
 
-Stack<int> stack = 
-    new Stack<int>(inputNumbers.Take(elementsToPush));
+Queue<int> queue =
+    new Queue<int>(inputNumbers.Take(elementsToPush));
 
-for (int i = 0; i < elementsToPop && stack.Any(); i++)
+for (int i = 0; i < elementsToPop && queue.Any(); i++)
 {
-    stack.Pop();
+    queue.Dequeue();
 }
 
-if (stack.Contains(checkForElement))
+if (queue.Contains(checkForElement))
 {
     Console.WriteLine("true");
 }
-else if (stack.Count == 0)
+else if (queue.Count == 0)
 {
     Console.WriteLine(0);
 }
-else if (!stack.Contains(checkForElement)) // could be 'else'
+else if (!queue.Contains(checkForElement))
 {
-    Console.WriteLine(stack.Min());
+    Console.WriteLine(queue.Min());
 }
