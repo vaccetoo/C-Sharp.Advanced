@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.BasicQueueOperations", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MaximumAndMinimumElement", "03.MaximumAndMinimumElement\03.MaximumAndMinimumElement.csproj", "{34B0B75E-06DC-43E1-99C3-3445B659A145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.FastFood", "04.FastFood\04.FastFood.csproj", "{648EFE0C-5E90-4E03-BD79-4561527418DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.FastFood", "04.FastFood\04.FastFood.csproj", "{648EFE0C-5E90-4E03-BD79-4561527418DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.FashionBoutique", "05.FashionBoutique\05.FashionBoutique.csproj", "{FCD67974-ADC3-4A1A-8B82-F63387EE4476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.FashionBoutique", "05.FashionBoutique\05.FashionBoutique.csproj", "{FCD67974-ADC3-4A1A-8B82-F63387EE4476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SongsQueue", "06.SongsQueue\06.SongsQueue.csproj", "{2F5B46EC-0E7B-44D1-802F-B6A139216283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.TruckTour", "07.TruckTour\07.TruckTour.csproj", "{45745991-F09C-4873-97C8-E371B70847EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{FCD67974-ADC3-4A1A-8B82-F63387EE4476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCD67974-ADC3-4A1A-8B82-F63387EE4476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCD67974-ADC3-4A1A-8B82-F63387EE4476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F5B46EC-0E7B-44D1-802F-B6A139216283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F5B46EC-0E7B-44D1-802F-B6A139216283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F5B46EC-0E7B-44D1-802F-B6A139216283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F5B46EC-0E7B-44D1-802F-B6A139216283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45745991-F09C-4873-97C8-E371B70847EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45745991-F09C-4873-97C8-E371B70847EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45745991-F09C-4873-97C8-E371B70847EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45745991-F09C-4873-97C8-E371B70847EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
