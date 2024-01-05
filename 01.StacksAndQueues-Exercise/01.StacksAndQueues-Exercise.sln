@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.BalancedParenthesis", "0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.SimpleTextEditor", "09.SimpleTextEditor\09.SimpleTextEditor.csproj", "{754FCB60-EB1E-49BA-9361-D3677A2FBA04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Crossroads", "10.Crossroads\10.Crossroads.csproj", "{2FE72506-1A40-403E-8A9D-CB9388F7CBD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.Crossroads", "10.Crossroads\10.Crossroads.csproj", "{2FE72506-1A40-403E-8A9D-CB9388F7CBD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.KeyRevolver", "11.KeyRevolver\11.KeyRevolver.csproj", "{575FDA17-33CA-49AD-8FE4-9568533FDABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.KeyRevolver", "11.KeyRevolver\11.KeyRevolver.csproj", "{575FDA17-33CA-49AD-8FE4-9568533FDABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.CupsAndBottles", "12.CupsAndBottles\12.CupsAndBottles.csproj", "{9F0B0E53-A1AF-4DE2-85EE-FD874E1EBC53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{575FDA17-33CA-49AD-8FE4-9568533FDABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{575FDA17-33CA-49AD-8FE4-9568533FDABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{575FDA17-33CA-49AD-8FE4-9568533FDABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0B0E53-A1AF-4DE2-85EE-FD874E1EBC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0B0E53-A1AF-4DE2-85EE-FD874E1EBC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0B0E53-A1AF-4DE2-85EE-FD874E1EBC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0B0E53-A1AF-4DE2-85EE-FD874E1EBC53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
