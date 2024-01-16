@@ -1,8 +1,7 @@
 ﻿
 string command = string.Empty;
 
-Dictionary<string, Dictionary<List<string>, List<string>>> vloggerFollowers = 
-    new Dictionary<string, Dictionary<List<string>, List<string>>>();
+List<Vlogger> vloggers = new List<Vlogger>();
 
 while ((command = Console.ReadLine()) != "Statistics")
 {
@@ -14,18 +13,56 @@ while ((command = Console.ReadLine()) != "Statistics")
 
     if (commandType == "joined")
     {
-        if (!vloggerFollowers.ContainsKey(vloggerName))
-        {
-            vloggerFollowers.Add(vloggerName, new Dictionary<List<string>, List<string>>());
-        }
-        else
-        {
-            continue;
-        }
+        Vlogger newVlogger = new Vlogger(vloggerName, new HashSet<string>(), new HashSet<string>());
+        vloggers.Add(newVlogger);
     }
     else if (commandType == "followed")
     {
         string secondVlogger = commandInfo[2];
+
+        foreach (Vlogger vlogger in vloggers)
+        {
+            if (vlogger.Name == vloggerName && secondVlogger != vloggerName)
+            {
+                vlogger.Following.Add(secondVlogger);
+            }
+
+            if (vlogger.Name == secondVlogger)
+            {
+                vlogger.Followers.Add(vloggerName);
+            }
+        }
     }
 }
 
+Console.WriteLine($"The V-Logger has a total of {vloggers.Count} vloggers in its logs.");
+
+int count = 1;
+
+foreach (var vlogger in vloggers.OrderByDescending(x => x.Followers.Count).ThenBy(x => x.Following.Count))
+{
+    Console.WriteLine($"{count}. {vlogger.Name} : {vlogger.Followers.Count} followers, {vlogger.Following.Count} following");
+
+    foreach (var follower in vlogger.Followers)
+    {
+        Console.WriteLine($"* {follower}");
+    }
+
+    count++;
+}
+
+class Vlogger
+{
+    public Vlogger(string name, HashSet<string> following, HashSet<string> followers)
+    {
+        Name = name;
+        Following = following;
+        Followers = followers;
+    }
+
+    public string Name { get; set; }
+
+    public HashSet<string> Following { get; set; }
+
+    public HashSet<string> Followers { get; set; }   
+}
