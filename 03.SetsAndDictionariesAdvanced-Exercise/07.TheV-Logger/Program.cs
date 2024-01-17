@@ -1,51 +1,65 @@
 ﻿
 string command = string.Empty;
 
-List<Vlogger> vloggers = new List<Vlogger>();
+List<Vlogger> vloggersList = new List<Vlogger>();
 
 while ((command = Console.ReadLine()) != "Statistics")
 {
     string[] commandInfo = command
         .Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-    string vloggerName = commandInfo[0];
-    string commandType = commandInfo[1];
+    string firstVlogger = commandInfo[0];
+    string currentCommand = commandInfo[1];
 
-    if (commandType == "joined")
+    if (currentCommand == "joined")
     {
-        Vlogger newVlogger = new Vlogger(vloggerName, new HashSet<string>(), new HashSet<string>());
-        vloggers.Add(newVlogger);
+        if (vloggersList.Any(x => x.Name == firstVlogger))
+        {
+            continue;
+        }
+
+        Vlogger newVlogger = new Vlogger(firstVlogger, new SortedSet<string>(), new HashSet<string>());
+
+        vloggersList.Add(newVlogger);
     }
-    else if (commandType == "followed")
+    else if (currentCommand == "followed")
     {
         string secondVlogger = commandInfo[2];
 
-        foreach (Vlogger vlogger in vloggers)
+        if (vloggersList.Any(x => x.Name == firstVlogger) &&
+            vloggersList.Any(x => x.Name == secondVlogger) &&
+            firstVlogger != secondVlogger)
         {
-            if (vlogger.Name == vloggerName && secondVlogger != vloggerName)
+            foreach (var vlogger in vloggersList)
             {
-                vlogger.Following.Add(secondVlogger);
-            }
+                if (vlogger.Name == firstVlogger)
+                {
+                    vlogger.Following.Add(secondVlogger);
+                }
 
-            if (vlogger.Name == secondVlogger)
-            {
-                vlogger.Followers.Add(vloggerName);
+                if (vlogger.Name == secondVlogger)
+                {
+                    vlogger.Followers.Add(firstVlogger);
+                }
             }
         }
     }
 }
 
-Console.WriteLine($"The V-Logger has a total of {vloggers.Count} vloggers in its logs.");
+Console.WriteLine($"The V-Logger has a total of {vloggersList.Count} vloggers in its logs.");
 
 int count = 1;
 
-foreach (var vlogger in vloggers.OrderByDescending(x => x.Followers.Count).ThenBy(x => x.Following.Count))
+foreach (var vlogger in vloggersList.OrderByDescending(x => x.Followers.Count).ThenBy(x => x.Following.Count))
 {
     Console.WriteLine($"{count}. {vlogger.Name} : {vlogger.Followers.Count} followers, {vlogger.Following.Count} following");
 
-    foreach (var follower in vlogger.Followers)
+    if (count == 1)
     {
-        Console.WriteLine($"* {follower}");
+        foreach (var follower in vlogger.Followers.OrderBy(name => name))
+        {
+            Console.WriteLine($"*  {follower}");
+        }
     }
 
     count++;
@@ -53,16 +67,16 @@ foreach (var vlogger in vloggers.OrderByDescending(x => x.Followers.Count).ThenB
 
 class Vlogger
 {
-    public Vlogger(string name, HashSet<string> following, HashSet<string> followers)
+    public Vlogger(string name, SortedSet<string> followers, HashSet<string> following)
     {
         Name = name;
-        Following = following;
         Followers = followers;
+        Following = following;
     }
 
     public string Name { get; set; }
 
-    public HashSet<string> Following { get; set; }
+    public SortedSet<string> Followers { get; set; }
 
-    public HashSet<string> Followers { get; set; }   
+    public HashSet<string> Following { get; set; }
 }
