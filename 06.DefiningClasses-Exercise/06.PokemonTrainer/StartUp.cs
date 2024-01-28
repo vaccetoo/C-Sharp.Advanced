@@ -20,7 +20,7 @@ class StartUp
 
             if (trainers.Any(n => n.Name == trainerName))
             {
-                trainers.First(n => n.Name == trainerName).AddPokemon(pokemon);
+                trainers.First(n => n.Name == trainerName).Pokemons.Add(pokemon);
             }
             else
             {
@@ -62,7 +62,7 @@ class StartUp
     private static Trainer CreateTrainer(string trainerName, Pokemon pokemon)
     {
         Trainer trainer = new Trainer(trainerName);
-        trainer.AddPokemon(pokemon);
+        trainer.Pokemons.Add(pokemon);
 
         return trainer;
     }
