@@ -29,7 +29,7 @@ namespace SoftUniParking
             {
                 return "Car with that registration number, already exists!";
             }
-            else if (cars.Count + 1 == Capacity) // Check if the parking is full
+            else if (Count >= Capacity) // Check if the parking is full
             {
                 return "Parking is full!";
             }
@@ -66,12 +66,8 @@ namespace SoftUniParking
         {
             foreach (string registrationNumber in registrationNumbers)
             {
-                if (cars.Any(r => r.RegistrationNumber == registrationNumber))
-                {
-                    cars.RemoveAll(r => r.RegistrationNumber == registrationNumber);
-                }
+                RemoveCar(registrationNumber);
             }
         }
-
     }
 }
