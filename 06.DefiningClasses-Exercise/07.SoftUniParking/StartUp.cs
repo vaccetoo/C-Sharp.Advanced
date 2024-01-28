@@ -3,7 +3,7 @@ using SoftUniParking;
 
 namespace SoftuniParking;
 
-class StartUp
+public class StartUp
 {
     public static void Main()
     {
@@ -17,13 +17,13 @@ class StartUp
         // RegistrationNumber: CC1856BG
 
         var parking = new Parking(5);
-        parking.AddCar(car);
+        Console.WriteLine(parking.AddCar(car));
         // Successfully added new car Skoda CC1856BG
 
-        parking.AddCar(car);
+        Console.WriteLine(parking.AddCar(car));
         // Car with that registration number, already exists!
 
-        parking.AddCar(car2);
+        Console.WriteLine(parking.AddCar(car2));
         // Successfully added new car Audi EB8787MN
 
         Console.WriteLine(parking.GetCar("EB8787MN").ToString());
@@ -32,10 +32,10 @@ class StartUp
         // HorsePower: 110
         // RegistrationNumber: EB8787MN
 
-        parking.RemoveCar("EB8787MN");
+        Console.WriteLine(parking.RemoveCar("EB8787MN"));
         // Successfullyremoved EB8787MN
 
-        Console.WriteLine(parking.Count());
+        Console.WriteLine(parking.Count);
         // 1
 
     }

@@ -18,40 +18,42 @@ namespace SoftUniParking
             cars = new List<Car>();
         }
 
+        public int Count { get { return cars.Count; } }
+
         public int Capacity { get { return capacity; } set { capacity = value; } }
 
-        public void AddCar(Car car)
+        public string AddCar(Car car)
         {
             // Check if the car already exist in the parking
             if (cars.Any(r => r.RegistrationNumber == car.RegistrationNumber))
             {
-                Console.WriteLine("Car with that registration number, already exists!");
+                return "Car with that registration number, already exists!";
             }
             else if (cars.Count + 1 == Capacity) // Check if the parking is full
             {
-                Console.WriteLine("Parking is full!");
+                return "Parking is full!";
             }
             else
             {
                 cars.Add(car);
 
-                Console.WriteLine($"Successfully added new car {car.Make} {car.RegistrationNumber}");
+                return $"Successfully added new car {car.Make} {car.RegistrationNumber}";
             }
 
 
         }
 
-        public void RemoveCar(string registrationNumber)
+        public string RemoveCar(string registrationNumber)
         {
             if (!cars.Any(r => r.RegistrationNumber == registrationNumber))
             {
-                Console.WriteLine("Car with that registration number, doesn't exist!");
+                return "Car with that registration number, doesn't exist!";
             }
             else
             {
                 cars.RemoveAll(r => r.RegistrationNumber == registrationNumber);
 
-                Console.WriteLine($"Successfully removed {registrationNumber}");
+                return $"Successfully removed {registrationNumber}";
             }
         }
 
@@ -71,9 +73,5 @@ namespace SoftUniParking
             }
         }
 
-        public int Count()
-        {
-            return cars.Count;
-        }
     }
 }
