@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGambler", "TheGambler\Th
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceriesManagement", "GroceriesManagement\GroceriesManagement.csproj", "{0946109A-A562-4CEC-8BE7-427B4246A3DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OffroadChallenge", "OffroadChallenge\OffroadChallenge.csproj", "{7A512536-359B-4BF5-8D4E-6BB648EB9077}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0946109A-A562-4CEC-8BE7-427B4246A3DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0946109A-A562-4CEC-8BE7-427B4246A3DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0946109A-A562-4CEC-8BE7-427B4246A3DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A512536-359B-4BF5-8D4E-6BB648EB9077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A512536-359B-4BF5-8D4E-6BB648EB9077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A512536-359B-4BF5-8D4E-6BB648EB9077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A512536-359B-4BF5-8D4E-6BB648EB9077}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
