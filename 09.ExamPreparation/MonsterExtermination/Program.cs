@@ -9,8 +9,8 @@ int[] soldiersAttacksAmmounts = Console.ReadLine()
     .Select(int.Parse)
     .ToArray();
 
-Queue<int> monstersArmor =  new Queue<int>(monsterArmorsAmmounts);
-Stack<int> soldiersAttack =  new Stack<int>(soldiersAttacksAmmounts);
+Queue<int> monstersArmor = new Queue<int>(monsterArmorsAmmounts);
+Stack<int> soldiersAttack = new Stack<int>(soldiersAttacksAmmounts);
 
 int killedMonsters = 0;
 
@@ -25,12 +25,22 @@ while (monstersArmor.Any() && soldiersAttack.Any())
 
         monstersArmor.Dequeue();
 
-        int newAttackValue = currentAttack - currentArmor;
+        int decreasedAttack = currentAttack - currentArmor;
         soldiersAttack.Pop();
 
-        if (newAttackValue > 0)
+        if (soldiersAttack.Count >= 0 && decreasedAttack > 0)
         {
-            soldiersAttack.Push(newAttackValue);
+            if (soldiersAttack.Count == 0)
+            {
+                soldiersAttack.Push(decreasedAttack);
+            }
+            else
+            {
+                int nextAttack = soldiersAttack.Peek();
+                soldiersAttack.Pop();
+
+                soldiersAttack.Push(nextAttack + decreasedAttack);
+            }
         }
     }
     else
