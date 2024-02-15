@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSquirrel", "TheSquirrel\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothesMagazine", "ClothesMagazine\ClothesMagazine.csproj", "{FF0BBCCA-5527-4358-AB20-AE5CD52B586E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApocalypsePreparation", "ApocalypsePreparation\ApocalypsePreparation.csproj", "{3159DAA0-3247-4A51-9726-1EE4510197A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApocalypsePreparation", "ApocalypsePreparation\ApocalypsePreparation.csproj", "{3159DAA0-3247-4A51-9726-1EE4510197A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlindMan'sBuff", "BlindMan'sBuff\BlindMan'sBuff.csproj", "{CCF21E8F-319A-4AF8-9A5B-B505E48E2B3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlindMan'sBuff", "BlindMan'sBuff\BlindMan'sBuff.csproj", "{CCF21E8F-319A-4AF8-9A5B-B505E48E2B3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniKindergarten", "SoftUniKindergarten\SoftUniKindergarten.csproj", "{B624BF39-8BA5-4AEC-A4F7-889199BC8B59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{CCF21E8F-319A-4AF8-9A5B-B505E48E2B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCF21E8F-319A-4AF8-9A5B-B505E48E2B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCF21E8F-319A-4AF8-9A5B-B505E48E2B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B624BF39-8BA5-4AEC-A4F7-889199BC8B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B624BF39-8BA5-4AEC-A4F7-889199BC8B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B624BF39-8BA5-4AEC-A4F7-889199BC8B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B624BF39-8BA5-4AEC-A4F7-889199BC8B59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
