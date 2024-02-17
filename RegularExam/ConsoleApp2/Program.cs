@@ -61,7 +61,6 @@ while (true)
     {
         field[currentRow, currentCol] = 'J';
         field[lastRow, lastCol] = '-';
-        continue;
     }
     else if (field[currentRow, currentCol] == 'E')
     {
